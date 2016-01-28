@@ -33,7 +33,7 @@ class HelpRequest(TimeStampedModel):
         (BUSINESS, 'Business'),
     )
     requester = models.ForeignKey(User, related_name='req')
-    provider = models.ForeignKey(User, related_name='pro')
+    provider = models.ForeignKey(User, related_name='pro', null=True, blank=True)
     type = models.CharField(max_length=1, choices=TYPE_CHOICES,
                             default=INTERVIEW_PREP)
     interview_prep_choices = models.CharField(max_length=1, choices=INTERVIEW_PREP_CHOICES,
@@ -45,7 +45,7 @@ class HelpRequest(TimeStampedModel):
                                 default=FACE2FACE)
     date_start = models.DateField()
     date_end = models.DateField()
-    tags = TaggableManager()
+    tags = TaggableManager(blank=True)
 
     class Meta:
         verbose_name = u'Help Request'

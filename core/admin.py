@@ -14,3 +14,5 @@ class UserProfileAdmin(admin.ModelAdmin):
 
     def linked_in(self, obj):
         return '<a href="%s">%s</a>' % (obj.linked_in_url, obj.linked_in_url)
+
+    linked_in.allow_tags = True

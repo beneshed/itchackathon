@@ -9,6 +9,11 @@ https://docs.djangoproject.com/en/1.9/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.9/ref/settings/
 """
+from django.utils.translation import ugettext_lazy as _
+
+
+def gettext_noop(s):
+    return s
 
 import os
 
@@ -38,9 +43,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'taggit',
+    'rest_framework',
     'core',
     'matching',
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAdminUser',),
+    'PAGE_SIZE': 10
+}
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
@@ -52,6 +63,14 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+LANGUAGES = [
+    ('en', gettext_noop('English')),
+    ('es', gettext_noop('Spanish')),
+    ('fr', gettext_noop('French')),
+    ('he', gettext_noop('Hebrew')),
+]
+
 
 ROOT_URLCONF = 'hackathon_project.urls'
 
@@ -109,7 +128,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Jerusalem'
 
 USE_I18N = True
 
