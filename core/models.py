@@ -1,11 +1,11 @@
 from __future__ import unicode_literals
-from model_utils.models import TimeStampedModel
+import calendar
 
+from model_utils.models import TimeStampedModel
 from django.db import models
 from django.contrib.auth.models import User
 from django.core.validators import MaxValueValidator, MinValueValidator
 from taggit.managers import TaggableManager
-
 from django.conf import settings
 
 class UserProfile(TimeStampedModel):
@@ -16,10 +16,11 @@ class UserProfile(TimeStampedModel):
     PROGRAM_CHOICES = (
         (FELLOWS, 'Fellows'),
         (CTO, 'CTO Bootcamp'),
-        (INTERNSHIP, 'Internship'),
+        (INTERNSHIP, 'Interns'),
         (EXPERIENCE, 'Experience'),
     )
     user = models.OneToOneField(User, on_delete=models.CASCADE)
+    alumni = models.BooleanField(default=True)
     nationality = models.CharField(max_length=255)
     current_location = models.CharField(max_length=255)
     work = models.CharField(max_length=255)
@@ -35,6 +36,8 @@ class UserProfile(TimeStampedModel):
                                         default=EXPERIENCE)
     itc_program_year = models.IntegerField(default=2013, validators=[MinValueValidator(2013),
                                                                      MaxValueValidator(2016)])
+    itc_program_cohort = models.CharField(max_length=4, choices=tuple((m, m) for m in calendar.month_abbr[1:]),
+                                          default='Jan')
     linked_in_url = models.CharField(max_length=255, default='http://linkedin.com/')
     skills = TaggableManager(blank=True)
 
