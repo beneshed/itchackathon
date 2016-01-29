@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="all,follow">
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>ALUMNITC</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,700,800' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/match.js"></script>
+    <!-- Bootstrap and Font Awesome css -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+
+    <!-- Css animations  -->
+    <link href="css/animate.css" rel="stylesheet">
+
+    <!-- Theme stylesheet, if possible do not edit this stylesheet -->
+    <link href="css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+
+    <link rel="stylesheet" href="css/match.css">
+        <script src="js/index.js"></script>
+
+</head>
+
+<body>
+
+<div id="all">
+
+        <header>
+
+        <!-- *** NAVBAR ***
+_________________________________________________________ -->
+
+        <div class="navbar-affixed-top" data-spy="affix" data-offset-top="200">
+
+            <div class="navbar navbar-default yamm" role="navigation" id="navbar">
+
+                <div class="container">
+                    <div class="navbar-header">
+
+                        <a class="navbar-brand home" href="index.html">
+                            <img src="img/logo.png" alt="Universal logo" class="hidden-xs hidden-sm">
+                            <img src="img/logo-small.png" alt="Universal logo" class="visible-xs visible-sm"><span class="sr-only">Universal - go to homepage</span>
+                        </a>
+                        <div class="navbar-buttons">
+                            <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
+                                <span class="sr-only">Toggle navigation</span>
+                                <i class="fa fa-align-justify"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!--/.navbar-header -->
+
+                    <div class="navbar-collapse collapse" id="navigation">
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="">
+                                <a  href="alumni_directory.html" >Alumni</a>
+                            </li>
+
+                            <li class="">
+                                <a  href="register.html" class="blue">REGISTER NOW</a>
+                            </li>
+
+                            <li class="">
+                                <a id="log_in"><i class="fa fa-user  "></i> <span> LOG IN </span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- /#navbar -->
+
+        </div>
+
+        <!-- *** NAVBAR END *** -->
+
+    </header>
+
+      <!-- *** LOGIN MODAL ***
+_________________________________________________________ -->
+
+    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="submit_login">Customer login</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="account.html" method="post" >
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="email_modal" placeholder="email">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="password_modal" placeholder="password">
+                        </div>
+
+                        <p class="text-center">
+                            <button class="btn btn-template-main"><i class="fa fa-sign-in"></i> Log in</button>
+                        </p>
+
+                    </form>
+
+                    <p class="text-center text-muted">Not registered yet?</p>
+                    <p class="text-center text-muted"><a href="customer-register.html"><strong>Register now</strong></a>! It is easy and done in 1&nbsp;minute and gives you access to special discounts and much more!</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- *** LOGIN MODAL END *** -->
+
+
+
+    <!-- *** new account ***
+_________________________________________________________ -->
+
+
+    <div id="heading-breadcrumbs">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="content">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="box">
+                        <h2 class="text-uppercase">New account</h2>
+                        <hr>
+
+                        <form action="account.html" method="post">
+                            <div class="form-group">
+                                <label for="name-login">Name</label>
+                                <input type="text" class="form-control" id="name-login">
+                            </div>
+                            <div class="form-group">
+                                <label for="email-login">Email</label>
+                                <input type="text" class="form-control" id="email-login">
+                            </div>
+                            <div class="form-group">
+                                <label for="password-login">Password</label>
+                                <input type="password" class="form-control" id="password-login">
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-template-main"><i class="fa fa-user-md"></i> Register</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /.row -->
+
+        </div>
+        <!-- /.container -->
+    </div>
+    <!-- /#content -->
+
+
+
+
+
+
+    <div id="copyright">
+    </div>
+
+</div>
+<!-- /#all -->
+
+<!--  -->
+
+</body>
+
+</html>

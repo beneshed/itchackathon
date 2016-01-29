@@ -8,6 +8,7 @@ $(document).ready(function(){
     interview();
     mentoring();
     career();
+    accordion();
 });
 
 function tag(){
@@ -52,6 +53,16 @@ function career(){
         $( "#need-career" ).removeClass( "opacity");
         $( "#need-interview" ).addClass( "opacity");
     });
+}
+
+function accordion(){
+    $( "#accordion" ).accordion({
+        header: "h3",
+        panel:"form",
+        active: true,
+        collapsible: true
+    });
+var isDisabled = $( ".validate" ).accordion( "option", "disabled" );
 }
 
 

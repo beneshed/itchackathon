@@ -3,7 +3,7 @@
 /*-------------------------------------------------------------------------------------------------------------------------------------------
  GLOBAL STYLES
  ---------------------------------------------------------------------------------------------------------------------------------------------*/
-a.blue{
+.blue{
     color: #2AB5Eb; !important;
 }
 .navbar-brand>img {
@@ -126,6 +126,15 @@ button, input, select, textarea {
     cursor: pointer;
 }
 
+.btn-all{
+    font-size: 30px;
+    background-color: #2AB5EA;
+    font-family:  Arial, sans-serif;
+    margin-bottom: 5%;
+    color: white;
+    width: 100%;
+}
+
 .need.alumni{
     background-color: #2AB5EA;
     width: 200PX;
@@ -135,45 +144,140 @@ button, input, select, textarea {
 /*-------------------------------------------------------------------------------------------------------------------------------------------
  ALUMNI - DIRECTORY PAGE
  ---------------------------------------------------------------------------------------------------------------------------------------------*/
+.alumni-background {
+    position: relative;
+    background: url('../img/texture-bw.png') center center repeat;
+    background-size: cover;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    /*height: 500px;*/
+    margin-top: 1%;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+.alumni-background .dark-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(242,242,242,.90);
+    /* opacity: 0.9; */
+    /*filter: alpha(opacity=90);*/
+}
+
+.row.alumni{
+    border: 6px solid white;
+    margin-top: 3%;
+}
+
+.left-info{
+    text-align: center;
+}
+
+.right-info{
+    margin-top: 10%;
+}
+
+.img-cirlce{
+    max-width: 70%;
+    height: auto;
+    display:block;
+}
+
+.alumni-key {
+    font-size: 19px;
+    font-weight: 700;
+    COLOR: #2AB5EA;
+    MARGIN-RIGHT: 2%;
+}
+
+.margin-info{
+    margin:5px;
+}
+
+.flag{
+    display: block;
+    margin-left: auto;
+    margin-right:auto ;
+}
+.img-skill{
+    margin-top: 5%;
+    display: block;
+    max-width: 80%;
+    height: auto
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------
+ ACCOUNT PAGE
+ ---------------------------------------------------------------------------------------------------------------------------------------------*/
+#heading-breadcrumbs {
+    background: url('../img/texture-bw.png') center center repeat;
+    padding: 20px 0;
+    margin-bottom: 40px;
+    margin-top: 10px;}
+
+input[type="radio"] {
+    width: 15px; /*Desired width*/
+    height: 15px; /*Desired height*/
+    cursor: pointer;
+    margin-right: 16px;
+    margin-left: 16px;}
+
+.panel-title {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: inherit;
+}
+
+.panel-default>.panel-heading {
+    color: white;
+    background-color: #2AB5EA;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+.panel-group.accordion .panel {
+    border: none;
+}
+
+.margin-request{
+    text-align: center;
+    margin-top: 6%;
+}
+.col-sm-6.background{
+background-color: rgb(220, 213, 213);}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------
+VALIDATION RESULT PAGE
+ ---------------------------------------------------------------------------------------------------------------------------------------------*/
 
 .matching-background {
-  position: relative;
-  background: url('../img/texture-bw.png') center center repeat;
-  background-size: cover;
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-  /*height: 500px;*/
-  margin-top: 1%;
-  padding-bottom: 5%;
+    position: relative;
+    background: url('../img/texture-bw.png') center center repeat;
+    background-size: cover;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    /*height: 500px;*/
+    margin-top: 1%;
+    padding-bottom: 5%;
     padding-top: 5%;
 }
 .matching-background .dark-mask {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: rgba(242,242,242,.90);
     /* opacity: 0.9; */
-  /*filter: alpha(opacity=90);*/
+    /*filter: alpha(opacity=90);*/
 }
 
 .text-matching{
     font-size: 20px;
     text-align: center;
 }
-
-
-/*-------------------------------------------------------------------------------------------------------------------------------------------
- ACCOUNT PAGE
- ---------------------------------------------------------------------------------------------------------------------------------------------*/
-
-
-
-
-
-
-/*-------------------------------------------------------------------------------------------------------------------------------------------
-VALIDATION RESULT PAGE
- ---------------------------------------------------------------------------------------------------------------------------------------------*/
