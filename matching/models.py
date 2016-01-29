@@ -53,3 +53,4 @@ class HelpRequest(TimeStampedModel):
 
     def __unicode__(self):
         return u'%s\'s help request' % self.requester.get_full_name()
+

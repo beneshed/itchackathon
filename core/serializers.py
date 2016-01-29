@@ -37,3 +37,12 @@ class HelpRequestSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = HelpRequest
+
+    def update(self, instance, validated_data):
+        try:
+            update_user = User.objects.get(email=validated_data['provider']['email'])
+            instance.provider = update_user
+            instance.save()
+        except User.DoesNotExist:
+            return instance
+        return instance
