@@ -46,7 +46,9 @@ a.blue{
     transform: scale(1.1);
 }
 
-
+.need.opacity{
+    background-color: rgba(255, 255, 255, 0.3);
+}
 
 h3 .need-title{
     color: #2AB5EA;
@@ -61,21 +63,106 @@ h3 .need-title{
     margin-bottom: auto;
 }
 
+.checkbox{
+    font-family:  Arial, sans-serif;
+    font-size: 20px;
+    margin-right: 10%;
+    margin-left: 2%  ;
+    margin-top: 2%;
+    display: inline-block;}
 
 
+input[type="checkbox"] {
+    width: 25px; /*Desired width*/
+    height: 25px; /*Desired height*/
+    cursor: pointer;
+}
+
+.input-checkbox{
+    margin-left: 10%;
+    width: auto;
+
+}
+
+.checkbox label, .radio label {
+    margin-bottom: 13px;
+    width: auto;
+}
 
 
+.subject {
+    margin-top: 2%;
+    display: block;
+    margin-bottom: 3%;
+    margin-left: inherit;
+}
+.block-form{
+    margin-top: 2%;
+    border-radius: 10px;
+    padding-bottom: 5%;
+    position: relative;
+    background: rgba(255, 255, 255, 0.5);
+    display: none;
 
+}
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    margin-left: inherit;
+}
+
+.btn-search{
+    background-color:#3B393B ;
+    color: white;
+    border-radius: 10px;
+    width: 350px;
+    margin-right: auto;
+    padding: 2%;
+    margin-top: 2%;
+}
+
+.btn-search {
+    cursor: pointer;
+}
+
+.need.alumni{
+    background-color: #2AB5EA;
+    width: 200PX;
+    text-align: center;
+}
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------
  ALUMNI - DIRECTORY PAGE
  ---------------------------------------------------------------------------------------------------------------------------------------------*/
 
+.matching-background {
+  position: relative;
+  background: url('../img/texture-bw.png') center center repeat;
+  background-size: cover;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  /*height: 500px;*/
+  margin-top: 1%;
+  padding-bottom: 5%;
+    padding-top: 5%;
+}
+.matching-background .dark-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+    background: rgba(242,242,242,.90);
+    /* opacity: 0.9; */
+  /*filter: alpha(opacity=90);*/
+}
 
-
-
-
-
+.text-matching{
+    font-size: 20px;
+    text-align: center;
+}
 
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------

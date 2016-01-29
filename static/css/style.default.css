@@ -804,7 +804,8 @@ fieldset[disabled] .btn-template-primary.active {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(42, 181, 234, 0.9)
+  background: #2AB5EA;
+  opacity: 0.9;
   filter: alpha(opacity=90);
 }
 .jumbotron h1,
@@ -855,7 +856,7 @@ fieldset[disabled] .btn-template-primary.active {
 }
 #categoryMenu h3 {
   padding: 20px;
-background: #f7f7f7;
+  background: #f7f7f7;
   margin: 0;
   border-bottom: solid 1px #eeeeee;
   text-transform: uppercase;
@@ -875,7 +876,7 @@ background: #f7f7f7;
 .panel.sidebar-menu .panel-heading {
   text-transform: uppercase;
   margin-bottom: 10px;
-background: none;
+  background: none;
   padding: 0;
   letter-spacing: 0.08em;
   border-bottom: none;
@@ -1146,8 +1147,9 @@ background: none;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
-  height: 500px;
+  /*height: 500px;*/
   margin-top: 1%;
+  padding-bottom: 5%;
 }
 .home-carousel .dark-mask {
   position: absolute;
@@ -1155,9 +1157,9 @@ background: none;
   left: 0;
   width: 100%;
   height: 100%;
-  background: #2AB5EA;
-  opacity: 0.9;
-  filter: alpha(opacity=90);
+    background: rgba(42,181,234,.90);
+    /* opacity: 0.9; */
+  /*filter: alpha(opacity=90);*/
 }
 .home-carousel .owl-carousel {
   padding-top: 60px;

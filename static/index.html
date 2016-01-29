@@ -7,16 +7,12 @@
     <meta name="googlebot" content="index,follow,snippet,archive">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>ALUMNITC</title>
+    <title>Universal - All In 1 Template</title>
 
     <meta name="keywords" content="">
 
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,700,800' rel='stylesheet' type='text/css'>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
-    <script src="js/index.js"></script>
     <!-- Bootstrap and Font Awesome css -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
@@ -29,6 +25,11 @@
 
     <!-- Custom stylesheet - for your changes -->
     <link href="css/alumni.css" rel="stylesheet">
+    <!-- Tag it  -->
+    <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/flick/jquery-ui.css">
+    <link href="css/jquery.tagit.css" rel="stylesheet" type="text/css">
+
+
 
     <!-- Responsivity for older IE -->
     <!--[if lt IE 9]>
@@ -38,10 +39,39 @@
 
     <!-- Favicon and apple touch icons-->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="img/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="img/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="img/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="img/apple-touch-icon-152x152.png" />
     <!-- owl carousel css -->
 
     <link href="css/owl.carousel.css" rel="stylesheet">
     <link href="css/owl.theme.css" rel="stylesheet">
+
+    <!-- #### JAVASCRIPT FILES ### -->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>-->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>-->
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+    <!--<script>-->
+    <!--window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')-->
+    <!--</script>-->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+    <script src="js/alumni.js"></script>
+    <script src="js/jquery.tag-it.js"></script>
+    <!--<script src="js/jquery.cookie.js"></script>-->
+    <!--<script src="js/waypoints.min.js"></script>-->
+    <!--<script src="js/jquery.counterup.min.js"></script>-->
+    <!--<script src="js/jquery.parallax-1.1.3.js"></script>-->
+    <!--<script src="js/front.js"></script>-->
+
 </head>
 
 <body>
@@ -49,6 +79,9 @@
 <div id="all">
 
     <header>
+
+        <!-- *** NAVBAR ***
+_________________________________________________________ -->
 
         <div class="navbar-affixed-top" data-spy="affix" data-offset-top="200">
 
@@ -82,7 +115,7 @@
                             </li>
 
                             <li class="">
-                                <a id="log_in"><i class="fa fa-user  "></i> <span> LOG IN </span></a>
+                                <a href="customer-register.html"><i class="fa fa-user  "></i> <span> LOG IN </span></a>
                             </li>
                         </ul>
                     </div>
@@ -108,7 +141,7 @@ _________________________________________________________ -->
                     <h4 class="modal-title" id="Login">Customer login</h4>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form action="customer-orders.html" method="post">
                         <div class="form-group">
                             <input type="text" class="form-control" id="email_modal" placeholder="email">
                         </div>
@@ -117,12 +150,8 @@ _________________________________________________________ -->
                         </div>
 
                         <p class="text-center">
-                            <button class="btn btn-template-main" id="submit_login"><i class="fa fa-sign-in"></i> Log in</button>
+                            <button class="btn btn-template-main"><i class="fa fa-sign-in"></i> Log in</button>
                         </p>
-
-<!--                         <div id="alert">
-                            <p> Validation Failure </p>
-                        </div> -->
 
                     </form>
 
@@ -134,49 +163,261 @@ _________________________________________________________ -->
         </div>
     </div>
 
+    <!-- *** LOGIN MODAL END *** -->
 
-
-    <section>
-        <!-- *** BLOCK 1 - FIND AN ITC HELPER***
+    <!-- *** BLOCK 1 - FIND AN ITC HELPER***
 _________________________________________________________ -->
 
-        <div class="home-carousel">
+    <div class="home-carousel">
 
-            <div class="dark-mask"></div>
+        <div class="dark-mask"></div>
 
-            <div class="container">
-                    <div class="row">
-                        <div class="col-sm-12 ">
-                            <h1 class="home-title">Need help from the <span class="title-black"> itc community ?</span> </h1>
-                            <p class="text-center"> What are you looking for ?</p>
-                        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 ">
+                    <h1 class="home-title">Need help from the <span class="title-black"> itc community ?</span> </h1>
+                    <p class="text-center"> Find your ITC HELPER</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div id="container-interview" class="col-md-4 col-xs-12 interview">
+                    <div id="need-interview" class="need">
+                        <h3 class="need-title">Interview preparation</h3>
                     </div>
+                </div>
 
-                    <div class="row">
-                        <div class="col-sm-4 ">
-                            <div class="need">
-                                <h3 class="need-title">Interview preparation</h3>
-                            </div>
-                        </div>
+                <div id="container-mentoring" class="col-md-4 col-xs-12 ">
+                    <div id="need-mentoring" class="need">
+                        <h3 class="need-title">Mentoring</h3>
+                    </div>
+                </div>
 
-                       <div class="col-sm-4 ">
-                            <div class="need">
-                                <h3 class="need-title">Mentoring</h3>
-                            </div>
-                        </div>
+                <div id="container-career" class="col-md-4 col-xs-12">
+                    <div id="need-career" class="need">
+                        <h3 class="need-title">Career opportunity </h3>
+                    </div>
+                </div>
 
-                        <div class="col-sm-4 ">
-                            <div class="need">
-                                <h3 class="need-title">Career opportunity </h3>
-                            </div>
+
+            </div>
+            <!-------------------INTERVIEW FORM--------------- -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <div id="interview-form" class="block-form">
+                        <div class="checkbox">
+                            <label class="checkbox">
+                                <input  type="checkbox">
+                                <span class="input-checkbox">Technical questions</span>
+                            </label>
+                            <label class="checkbox">
+                                <input  type="checkbox">
+                                <span class="input-checkbox">HR questions</span>
+                            </label>
+
+                            <span class="subject"> <b>Subjects:</b></span>
+
+                            <ul class="myTags">
+                                <!-- Existing list items will be pre-added to the tags -->
+                                <li>Python</li>
+                                <li>CSS</li>
+                                <li>HTML</li>
+                                <li>Ruby</li>
+                            </ul>
+                            <span class="subject"> <b>When are you need help? choose your date</b></span>
+                            <input type="text" class="datepicker">
+                            <span class="subject"> <b>Kind of meeting</b></span>
+                            <label class="checkbox">
+                                <input  type="checkbox">
+                                <span class="input-checkbox">Skype</span>
+                            </label>
+                            <label class="checkbox">
+                                <input  type="checkbox">
+                                <span class="input-checkbox">Face-to-face</span>
+                            </label>
+
+
+                            <a href="search_validation.html">
+                                <div class="btn-search">LOOKING FOR MY ITC HELPER</div>
+                            </a>
+
                         </div>
                     </div>
                 </div>
-                <!-- /.project owl-slider -->
             </div>
+            <!-------------------MENTORING FORM--------------- -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <div id="mentoring-form" class="block-form">
+                        <div class="checkbox">
+                            <label class="checkbox">
+                                <input  type="checkbox">
+                                <span class="input-checkbox">Technical mentoring</span>
+                            </label>
+                            <label class="checkbox">
+                                <input  type="checkbox">
+                                <span class="input-checkbox">Business mentoring</span>
+                            </label>
+
+                            <span class="subject"> <b>Subjects:</b></span>
+
+                            <ul class="myTags">
+                                <!-- Existing list items will be pre-added to the tags -->
+                                <li>Marketing</li>
+                                <li>Start-up to pich</li>
+                                <li>HTML</li>
+                                <li>Python</li>
+                            </ul>
+                            <span class="subject"> <b>When are you need help? choose your date</b></span>
+                            <input type="text" class="datepicker">
+                            <span class="subject"> <b>Kind of meeting</b></span>
+                            <label class="checkbox">
+                                <input  type="checkbox">
+                                <span class="input-checkbox">Skype</span>
+                            </label>
+                            <label class="checkbox">
+                                <input  type="checkbox">
+                                <span class="input-checkbox">Face-to-face</span>
+                            </label>
+                            <a href="search_validation.html">
+                                <div class="btn-search">LOOKING FOR MY ITC HELPER</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-------------------CAREER FORM-------------- -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <div id="career-form" class="block-form">
+                        <div class="checkbox">
+                            <span class="subject"> <b>You are looking for? </b></span>
+                            <label class="checkbox">
+                                <input  type="checkbox">
+                                <span class="input-checkbox">Trainee</span>
+                            </label>
+                            <label class="checkbox">
+                                <input  type="checkbox">
+                                <span class="input-checkbox">Internship</span>
+                            </label>
+                            <label class="checkbox">
+                                <input  type="checkbox">
+                                <span class="input-checkbox">Job</span>
+                            </label>
+                            <label class="checkbox">
+                                <input  type="checkbox">
+                                <span class="input-checkbox">Ressource for my/a company</span>
+                            </label>
+                            <a href="search_validation.html">
+                                <div class="btn-search">LOOKING FOR MY ITC HELPER</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
 
     <!-- *** ALUMNI CAROUSEL ***
 _________________________________________________________ -->
+
+
+    <div class="container">
+        <div class="col-md-12">
+            <div class="heading text-center">
+                <h2>Connect with your ITC Community</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3 col-sm-3">
+                    <div class="team-member" >
+                        <div class="image">
+                            <a href="team-member.html">
+                                <img src="img/Karen%20Assaraf.jpg" alt="" class="img-responsive img-circle">
+                            </a>
+                        </div>
+                        <h3><a href="team-member.html">Karen Assaraf</a></h3>
+                        <p class="role">ITC 2015</p>
+                        <div class="social">
+                            <a href="#" class="external facebook" ><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="external gplus" ><i class="fa fa-google-plus"></i></a>
+                            <a href="#" class="external twitter" ><i class="fa fa-twitter"></i></a>
+                            <a href="#" class="email"><i class="fa fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <!-- /.team-member -->
+                </div>
+
+                <div class="col-md-3 col-sm-3" >
+                    <div class="team-member">
+                        <div class="image">
+                            <a href="team-member.html">
+                                <img src="img/Daniel%20Adelberg.jpg" alt="" class="img-responsive img-circle">
+                            </a>
+                        </div>
+                        <h3><a href="team-member.html">Daniel Adelberg</a></h3>
+                        <p class="role">ITC 2015</p>
+
+                        <div class="social">
+                            <a href="#" class="external facebook" ><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="external gplus" ><i class="fa fa-google-plus"></i></a>
+                            <a href="#" class="external twitter" ><i class="fa fa-twitter"></i></a>
+                            <a href="#" class="email" ><i class="fa fa-envelope"></i></a>
+                        </div>
+
+                    </div>
+                    <!-- /.team-member -->
+                </div>
+                <div class="col-md-3 col-sm-3" >
+                    <div class="team-member">
+                        <div class="image">
+                            <a href="team-member.html">
+                                <img src="img/Marion%20Bellaiche.jpg" alt="" class="img-responsive img-circle">
+                            </a>
+                        </div>
+                        <h3><a href="team-member.html">Marion Bellaiche</a></h3>
+                        <p class="role">ITC 2015</p>
+                        <div class="social">
+                            <a href="#" class="external facebook" ><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="external gplus" ><i class="fa fa-google-plus"></i></a>
+                            <a href="#" class="external twitter" ><i class="fa fa-twitter"></i></a>
+                            <a href="#" class="email"><i class="fa fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <!-- /.team-member -->
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <div class="team-member">
+                        <div class="image">
+                            <a href="team-member.html">
+                                <img src="img/Ben%20Waters.jpg" alt="" class="img-responsive img-circle">
+                            </a>
+                        </div>
+                        <h3><a href="team-member.html">BEN WALTER</a></h3>
+                        <p class="role">ITC 2015</p>
+                        <div class="social">
+                            <a href="#" class="external facebook" ><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="external gplus" ><i class="fa fa-google-plus"></i></a>
+                            <a href="#" class="external twitter" ><i class="fa fa-twitter"></i></a>
+                            <a href="#" class="email" ><i class="fa fa-envelope"></i></a>
+                        </div>
+
+                    </div>
+                    <!-- /.team-member -->
+                    <div id="btn-seeAll-" class="col-md-4 col-xs-12 ">
+                        <div class="need alumni">
+                            <h3 class="need-title">SEE ALL </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+    </div>
 
 
 
@@ -351,26 +592,6 @@ _________________________________________________________ -->
 
 </div>
 <!-- /#all -->
-
-<!-- #### JAVASCRIPT FILES ### -->
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script>
-    window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')
-</script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-
-<script src="js/alumni.js"></script>
-<script src="js/jquery.cookie.js"></script>
-<script src="js/waypoints.min.js"></script>
-<script src="js/jquery.counterup.min.js"></script>
-<script src="js/jquery.parallax-1.1.3.js"></script>
-<script src="js/front.js"></script>
-
-
-
-<!-- owl carousel -->
-<script src="js/owl.carousel.min.js"></script>
 
 
 
