@@ -39,6 +39,7 @@ class UserProfile(TimeStampedModel):
     itc_program_cohort = models.CharField(max_length=4, choices=tuple((m, m) for m in calendar.month_abbr[1:]),
                                           default='Jan')
     linked_in_url = models.CharField(max_length=255, default='http://linkedin.com/')
+    cluster = models.IntegerField(default=0)
     skills = TaggableManager(blank=True)
 
     class Meta:
