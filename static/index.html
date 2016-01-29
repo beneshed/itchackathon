@@ -25,6 +25,7 @@
 
     <!-- Custom stylesheet - for your changes -->
     <link href="css/alumni.css" rel="stylesheet">
+    
     <!-- Tag it  -->
     <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/flick/jquery-ui.css">
     <link href="css/jquery.tagit.css" rel="stylesheet" type="text/css">
@@ -38,7 +39,7 @@
     <![endif]-->
 
     <!-- Favicon and apple touch icons-->
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+<!--     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
     <link rel="apple-touch-icon" sizes="57x57" href="img/apple-touch-icon-57x57.png" />
     <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png" />
@@ -46,7 +47,7 @@
     <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png" />
     <link rel="apple-touch-icon" sizes="120x120" href="img/apple-touch-icon-120x120.png" />
     <link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-144x144.png" />
-    <link rel="apple-touch-icon" sizes="152x152" href="img/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="img/apple-touch-icon-152x152.png" /> -->
     <!-- owl carousel css -->
 
     <link href="css/owl.carousel.css" rel="stylesheet">
@@ -66,6 +67,7 @@
 
     <script src="js/alumni.js"></script>
     <script src="js/jquery.tag-it.js"></script>
+    <script src="js/index.js"></script>
     <!--<script src="js/jquery.cookie.js"></script>-->
     <!--<script src="js/waypoints.min.js"></script>-->
     <!--<script src="js/jquery.counterup.min.js"></script>-->
@@ -115,7 +117,7 @@ _________________________________________________________ -->
                             </li>
 
                             <li class="">
-                                <a href="customer-register.html"><i class="fa fa-user  "></i> <span> LOG IN </span></a>
+                                <a id="log_in"><i class="fa fa-user  "></i> <span> LOG IN </span></a>
                             </li>
                         </ul>
                     </div>
@@ -138,10 +140,10 @@ _________________________________________________________ -->
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" id="Login">Customer login</h4>
+                    <h4 class="modal-title" id="submit_login">Customer login</h4>
                 </div>
                 <div class="modal-body">
-                    <form action="customer-orders.html" method="post">
+                    <form>
                         <div class="form-group">
                             <input type="text" class="form-control" id="email_modal" placeholder="email">
                         </div>

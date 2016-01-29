@@ -4,7 +4,7 @@ $(document).ready(function()
 		$("#login-modal").modal("show");
 	});
 
-	makeCorsRequest()
+	// makeCorsRequest()
 	$("#submit_login").click(function(e) {
 		request = $.ajax({
 			url: "http://54.200.15.158:8080/token",
@@ -69,5 +69,5 @@ function makeCorsRequest() {
     alert('Woops, there was an error making the request.');
   };
 
-  xhr.send(JSON.stringify(username:"hankyDicks", password:"FUCKCROSSDOMAIN"));
+  xhr.send(JSON.stringify({username:"hankyDicks", password:"FUCKCROSSDOMAIN"}));
 }
