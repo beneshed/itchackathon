@@ -16,16 +16,23 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from rest_framework import routers
+from rest_framework_jwt import views
 
-from core.views import UserProfileViewSet
+from core.views import UserProfileViewSet, TagViewReadOnlyViewSet, TaggedItemReadOnlyViewSet
+from matching.views import HelpRequestViewSet
 
 router = routers.DefaultRouter()
 router.register(r'profiles', UserProfileViewSet)
+router.register(r'tags', TagViewReadOnlyViewSet)
+router.register(r'tagged-items', TaggedItemReadOnlyViewSet)
+router.register(r'helps', HelpRequestViewSet, base_name='help')
+
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api/', include(router.urls)),
-    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    url(r'^token/', views.obtain_jwt_token)
 
 ]

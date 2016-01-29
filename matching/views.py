@@ -1,13 +1,17 @@
-from django.views.generic import ListView
-from django.contrib.auth.decorators import login_required
-from django.utils.decorators import method_decorator
+from rest_framework import viewsets
 
 from .models import HelpRequest
+from core.serializers import HelpRequestSerializer
 
 
-@method_decorator(login_required)
-class HelpRequestMatchView(ListView):
-    model = HelpRequest
+class HelpRequestViewSet(viewsets.ModelViewSet):
+    serializer_class = HelpRequestSerializer
 
     def get_queryset(self):
-        return HelpRequest.objects.filter(provider=None)
+        skills = self.request.query_params.get('skills', None)
+        _type = self.request.query_params.get('type', None)
+        if skills:
+            print skills.split(',')
+        if _type:
+            print _type.split(',')
+        return HelpRequest.objects.all()

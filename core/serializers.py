@@ -1,7 +1,9 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
+from taggit.models import Tag, TaggedItem
 
 from .models import UserProfile
+from matching.models import HelpRequest
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -15,3 +17,32 @@ class UserProfileSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = UserProfile
+
+
+class TagSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Tag
+
+
+class TaggedItemSerializer(serializers.ModelSerializer):
+    tag = TagSerializer()
+
+    class Meta:
+        model = TaggedItem
+
+
+class HelpRequestSerializer(serializers.ModelSerializer):
+    requester = UserSerializer()
+    provider = UserSerializer()
+
+    class Meta:
+        model = HelpRequest
+
+    def update(self, instance, validated_data):
+        try:
+            update_user = User.objects.get(email=validated_data['provider']['email'])
+            instance.provider = update_user
+            instance.save()
+        except User.DoesNotExist:
+            return instance
+        return instance
