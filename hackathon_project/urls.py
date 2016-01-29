@@ -18,10 +18,15 @@ from django.contrib import admin
 from rest_framework import routers
 from rest_framework_jwt import views
 
-from core.views import UserProfileViewSet
+from core.views import UserProfileViewSet, TagViewReadOnlyViewSet, TaggedItemReadOnlyViewSet
+from matching.views import HelpRequestViewSet
 
 router = routers.DefaultRouter()
 router.register(r'profiles', UserProfileViewSet)
+router.register(r'tags', TagViewReadOnlyViewSet)
+router.register(r'tagged-items', TaggedItemReadOnlyViewSet)
+router.register(r'helps', HelpRequestViewSet, base_name='help')
+
 
 
 urlpatterns = [
