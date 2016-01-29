@@ -1,6 +1,8 @@
 itc.csv
 # Byte-compiled / optimized / DLL files
 db.sqlite3
+*.pyc
+*.sqlite3
 __pycache__/
 *.py[cod]
 *$py.class

@@ -5,7 +5,7 @@ from .models import UserProfile
 
 @admin.register(UserProfile)
 class UserProfileAdmin(admin.ModelAdmin):
-    list_display = ('user', 'nationality', 'alumni',
+    list_display = ('user', 'nationality', 'alumni', 'cluster',
                     'current_location', 'work', 'startup_status',
                     'portfolio_status', 'itc', 'linked_in')
     list_filter = ('nationality', 'alumni', 'current_location')

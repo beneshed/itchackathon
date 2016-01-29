@@ -18,7 +18,8 @@ from django.contrib import admin
 from rest_framework import routers
 from rest_framework_jwt import views
 
-from core.views import UserProfileViewSet, TagViewReadOnlyViewSet, TaggedItemReadOnlyViewSet
+from core.views import UserProfileViewSet, TagViewReadOnlyViewSet, TaggedItemReadOnlyViewSet, \
+    SuggestView
 from matching.views import HelpRequestViewSet
 
 router = routers.DefaultRouter()
@@ -33,6 +34,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api/', include(router.urls)),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    url(r'^api/suggest/', SuggestView.as_view()),
     url(r'^token/', views.obtain_jwt_token)
 
 ]
