@@ -15,8 +15,8 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.22/gmaps.min.js"></script>
+
+    <script src="js/index.js"></script>
     <!-- Bootstrap and Font Awesome css -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
@@ -50,9 +50,6 @@
 
     <header>
 
-        <!-- *** NAVBAR ***
-_________________________________________________________ -->
-
         <div class="navbar-affixed-top" data-spy="affix" data-offset-top="200">
 
             <div class="navbar navbar-default yamm" role="navigation" id="navbar">
@@ -85,7 +82,7 @@ _________________________________________________________ -->
                             </li>
 
                             <li class="">
-                                <a href="customer-register.html"><i class="fa fa-user  "></i> <span> LOG IN </span></a>
+                                <a id="log_in"><i class="fa fa-user  "></i> <span> LOG IN </span></a>
                             </li>
                         </ul>
                     </div>
@@ -111,7 +108,7 @@ _________________________________________________________ -->
                     <h4 class="modal-title" id="Login">Customer login</h4>
                 </div>
                 <div class="modal-body">
-                    <form action="customer-orders.html" method="post">
+                    <form>
                         <div class="form-group">
                             <input type="text" class="form-control" id="email_modal" placeholder="email">
                         </div>
@@ -120,8 +117,12 @@ _________________________________________________________ -->
                         </div>
 
                         <p class="text-center">
-                            <button class="btn btn-template-main"><i class="fa fa-sign-in"></i> Log in</button>
+                            <button class="btn btn-template-main" id="submit_login"><i class="fa fa-sign-in"></i> Log in</button>
                         </p>
+
+<!--                         <div id="alert">
+                            <p> Validation Failure </p>
+                        </div> -->
 
                     </form>
 
@@ -133,7 +134,7 @@ _________________________________________________________ -->
         </div>
     </div>
 
-    <!-- *** LOGIN MODAL END *** -->
+
 
     <section>
         <!-- *** BLOCK 1 - FIND AN ITC HELPER***

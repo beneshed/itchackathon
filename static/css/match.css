@@ -1,0 +1,83 @@
+.requests {
+	text-align: left !important;
+}
+.requests_container {
+	position:relative;
+}
+
+.request_instance {
+	background: white;
+	margin: 15px 15px;
+	padding:10px 10px;
+	/*border: solid 1px #777;*/
+	color:#555;
+}
+
+.request_time {
+	text-align: right;
+	padding-top:5px;
+	padding-right:10px;
+}
+
+.request_status {
+	display:inline-block;
+	float:left;
+	color:#be6427;
+	font-size: 13px;
+	background: rgba(255, 165, 0, 0.45);
+	padding:5px 10px;
+}
+
+.request_cancel {
+	display:inline;
+}
+.request_complete {
+	display:inline;
+}
+
+.request_right_block {
+	float:right;
+	text-align: right;
+}
+.request_decline {
+	font-size:24px;
+	cursor:pointer;
+	display:inline-block;
+}
+
+.request_accept {
+	font-size:24px;
+	cursor:pointer;
+	display:inline-block;
+}
+
+
+.request_dont_show {
+	display:none;
+}
+
+.request_tags > ul {
+	margin-bottom: 0px;
+}
+.request_tags > ul >li{
+	color:#333;
+	display:inline-block;
+}
+.request_name_accept {
+	font-size:22px;
+}
+
+.request_subject {
+	color:#2FAADD;
+	padding-bottom:10px;
+}
+
+.tutoring_type {
+	display:inline-block;
+}
+.request_time {
+	display: inline-block;
+}
+.bottom_pair {
+	float:right;
+}
